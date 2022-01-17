@@ -1,0 +1,44 @@
+{#
+/**
+ * DS Back To Top plugin for Craft CMS 3.x
+ *
+ *
+ * @author    Dotsquares
+ * @copyright Copyright (c) 2021 Dotsquares
+ * @link      https://www.dotsquares.com/
+ 
+ */
+ #}
+
+{% import "_includes/forms" as forms %}
+
+
+
+<strong class="bg">{{ "Here you can configure the autoload."}}</strong>
+<br/>
+{{ forms.checkboxField({
+    label: 'Back To Top Button',
+    id: 'global',
+    name: 'onsite',
+    checked: settings.onsite,
+}) }}
+<p class="sub">Hide button so unselect checkbox.</p><hr/>
+
+
+{{ forms.autosuggestField({
+    label: "Background Color",
+    id: 'bgcolor',
+    name: 'bgcolor',
+    value: settings.bgcolor,
+    placeholder: 'Default Blank Color',
+    type: 'text',
+}) }}
+
+<p class="sub">Add background color of button. You can also add red, blue ext. color name.</p>
+
+
+
+
+
+
+
