@@ -48,9 +48,15 @@ class dsbacktotopService extends  Component
       $bgheight  = $settings->getbgheight();
       $fontsizes  = $settings->getfontsize();
       $hovercolor  = $settings->gethovercolor();
+      
       $scrollduration  = $settings->getscrollduration();
       $position  = $settings->getposition();
+      $options_one  = $settings->getlabeltype1();
+      $options_second  = $settings->getlabeltype2();
+      $options_third  = $settings->getlabeltype3();
+      $options_fourth  = $settings->getlabeltype4();
       $select  = $settings->getselect();
+     //echo '@@@';print_r($select);
 
       echo "<link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'/>";
       
@@ -84,13 +90,12 @@ if($enbledsites=='1'){ ?>
 .scrollup{
     position:fixed;
     width:32px;
-    height:auto;
-    bottom:6px;
+    height:32px;
+    bottom:0px;
     right:20px;
     display:none;
     background-color:#ff9800;
     z-index: 99999;
-    padding-bottom: 6px;
 }
 
 a.scrollup {
@@ -123,7 +128,7 @@ $(window).scroll(function(){
 			}
 		});
 		$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, <?php if($scrollduration){echo $scrollduration;}else{ echo '1500';}?>);
+			$("html, body").animate({ scrollTop: 0 }, <?php echo $scrollduration;?>);
 				return false;
 		});
 
