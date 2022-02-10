@@ -25,7 +25,7 @@
     }
   },
   "extra": {
-    "name": "DS Back To Top",
+    "name": "Back To Top",
     "handle": "dsbacktotop",
     "description": "Display DS Back to top",
     "hasCpSection": false,
